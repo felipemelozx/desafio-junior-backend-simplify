@@ -24,7 +24,6 @@
 - API REST
 - Consultas com Spring Data JPA
 - Injeção de Dependências
-- Tratamento de respostas de erro
 
 ## Como Executar
  Esse projeto vai estar com o banco de dados h2 como padrão.
