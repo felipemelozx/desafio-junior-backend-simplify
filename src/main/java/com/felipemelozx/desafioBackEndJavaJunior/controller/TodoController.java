@@ -21,8 +21,9 @@ public class TodoController {
     List<Todo> create(@RequestBody @Valid Todo todo) {
         return service.create(todo);
     }
-    @PutMapping
-    List<Todo> update(@RequestBody Todo todo) {
+    @PutMapping(value="/{id}")
+    List<Todo> update(@RequestBody Todo todo, @PathVariable Long id) {
+        todo.setId(id);
         return service.update(todo);
     }
 
@@ -31,7 +32,7 @@ public class TodoController {
         return service.list();
     }
 
-    @GetMapping(value="/{id}")
+    @DeleteMapping(value="/{id}")
     List<Todo> delete(@PathVariable Long id) {
         return service.delete(id);
     }

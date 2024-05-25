@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class TodoService {
-    private TodoRepository todoRepository;
+    private final TodoRepository todoRepository;
 
     public TodoService(TodoRepository todoRepository) {
         this.todoRepository = todoRepository;
@@ -23,7 +23,7 @@ public class TodoService {
     public List<Todo> list() {
     Sort sort = Sort.by("priority").descending().and(
             Sort.by("name").ascending());
-        return todoRepository.findAll();
+        return todoRepository.findAll(sort);
     }
     public List<Todo> update(Todo todo){
         todoRepository.save(todo);
