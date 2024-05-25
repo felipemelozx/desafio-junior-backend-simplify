@@ -27,27 +27,33 @@
 - Tratamento de respostas de erro
 
 ## Como Executar
+ Esse projeto vai estar com o banco de dados h2 como padrão.
+ Para trocar para o MySQL comente as linhas de configuração do H2 e descomem-te as linhas do MySQL.
+ 
 
+- Local do arquivo
+
+```
+ desafio-junior-backend-simplify/src/main/resources
+```
+ - Nome do arquivo
+ ```
+  application.properties
+ ```
 - Clonar repositório git
 
 ```
-
  git clone https://github.com/felipemelozx/desafio-junior-backend-simplify.git
-
 ```
 - Construir o projeto:
 
 ```
-
-$ ./mvnw clean package
-
+ ./mvnw clean package
 ```
 
 - Executar a aplicação:
 ```
-
 java -jar target/desafioBackEndJavaJunior-0.0.1-SNAPSHOT.jar
-
 ```
 
 Acesse a API em [localhost:8080/todos](http://localhost:8080/todos).
@@ -65,7 +71,6 @@ localhost:8080/todos
 ```
 #### Corpo da Requisição:
 ```
- [
   {
     "id": 0,
     "name": "string",
@@ -73,7 +78,6 @@ localhost:8080/todos
     "status": true,
     "priority": 0
   }
-]
 ```
 ### Listar Todos
 #### Verbo HTTP: GET 
@@ -94,7 +98,6 @@ localhost:8080/todos/id
 ```
 - Troque o campo id pelo numero id da todo ex: localhost:8080/todos/2
 ```
- [
   {
     "id": 0,
     "name": "string",
@@ -102,7 +105,6 @@ localhost:8080/todos/id
     "status": true,
     "priority": 0
   }
-]
 ```
 
 ### Delete Todo
