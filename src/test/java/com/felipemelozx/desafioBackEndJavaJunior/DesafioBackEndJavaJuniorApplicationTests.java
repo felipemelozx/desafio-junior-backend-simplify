@@ -28,5 +28,15 @@ class DesafioBackEndJavaJuniorApplicationTests {
 				.jsonPath("$[0].status").isEqualTo(todo.getStatus())
 				.jsonPath("$[0].priority").isEqualTo(todo.getPriority());
 	}
-
+	@Test
+	void testCreateTodoFail(){
+		var todo = new Todo("", "", true,1);
+		webTestClient
+				.post()
+				.uri("/todos")
+				.bodyValue(todo)
+				.exchange()
+				.expectStatus()
+				.isBadRequest();
+	}
 }
