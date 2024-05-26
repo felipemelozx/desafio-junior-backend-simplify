@@ -3,7 +3,7 @@
 
 
 
- Projeto e uma To-do list (CRUD) [desse desafio](https://github.com/simplify-tec/desafio-junior-backend-simplify) , a aplicação consiste em um sistema de gerenciamento de tarefas, onde os usuários podem criar, visualizar, editar e excluir tarefas.
+ O projeto é uma To-do list (CRUD) [desse desafio](https://github.com/simplify-tec/desafio-junior-backend-simplify) , a aplicação consiste em um sistema de gerenciamento de tarefas, onde os usuários podem criar, visualizar, editar e excluir tarefas.
 
 ##  Tecnologias usadas
 - [Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/)
